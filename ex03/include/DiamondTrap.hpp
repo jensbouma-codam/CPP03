@@ -34,9 +34,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 
 		DiamondTrap & operator=( DiamondTrap const & rhs ); 
 
-		void attack(const std::string &target);
-
-	void whoAmI();
+		void attack(const std::string &target) { ScavTrap::attack(target); }
+		
+		void whoAmI();
 };
 
-// Override for ClapTrap::name (parameter of the constructor + "_clap_name" suffix)

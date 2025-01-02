@@ -6,7 +6,7 @@
 /*   By: jbouma <jbouma@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/10/29 12:20:54 by jbouma        #+#    #+#                 */
-/*   Updated: 2024/12/31 20:24:33 by jensbouma     ########   odam.nl         */
+/*   Updated: 2025/01/01 13:41:48 by jensbouma     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {	
 	_name = name;
+	_hitpoints = FragTrap::_hitpoints;
+	_energyPoints = ScavTrap::_energyPoints;
+	_attackDamage = FragTrap::_attackDamage;
+
+	std::cout << "DiamondTrap " << _name << " Constructed" << std::endl;
+	std::cout << "Hitpoints: " << _hitpoints << std::endl;
+	std::cout << "EnergyPoints: " << _energyPoints << std::endl;
+	std::cout << "AttackDamage: " << _attackDamage << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -22,7 +30,7 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap " << _name << " Destructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap( DiamondTrap const & src ) : ClapTrap(src)
+DiamondTrap::DiamondTrap( DiamondTrap const & src ) : ClapTrap(src), FragTrap(src), ScavTrap(src)
 {
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
 	*this = src;

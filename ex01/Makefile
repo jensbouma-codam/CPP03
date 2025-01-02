@@ -8,7 +8,7 @@ INC_DIR		= -I include
 SRC_DIR		= src
 BUILD_DIR	= build
 CC			= c++
-CFLAGS		= -Wall -Wextra -Werror -std=c++17
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
 SRC			= $(addprefix $(SRC_DIR)/, $(FILES))
 OBJECTS		= $(SRC:%.cpp=$(BUILD_DIR)/%.o)
 HEADERS		= include/ClapTrap.hpp	\

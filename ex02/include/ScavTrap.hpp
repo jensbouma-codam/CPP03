@@ -20,12 +20,6 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-	protected:
-		std::string _name = ClapTrap::_name;
-		int _hitpoints = ClapTrap::_hitpoints;
-		int _energyPoints = ClapTrap::_energyPoints;
-		int _attackDamage = ClapTrap::_attackDamage;
-
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);

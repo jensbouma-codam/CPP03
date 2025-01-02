@@ -21,10 +21,9 @@
 class FragTrap : virtual public ClapTrap
 {
 	protected:
-		std::string _name = ClapTrap::_name;
-		int _hitpoints = ClapTrap::_hitpoints;
-		int _energyPoints = ClapTrap::_energyPoints;
-		int _attackDamage = ClapTrap::_attackDamage;
+		int _hitpoints;
+		int _energyPoints;
+		int _attackDamage;
 
 	public:
 		FragTrap();

@@ -19,13 +19,13 @@
 #include <string>
 #include <vector>
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : virtual public FragTrap, virtual public ScavTrap
 {
 	private:
 		std::string	_name;
-		int			_hitpoints = FragTrap::_hitpoints;
-		int			_energyPoints = ScavTrap::_energyPoints;
-		int			_attackDamage = FragTrap::_attackDamage;
+		int 		_hitpoints;
+		int 		_energyPoints;
+		int 		_attackDamage;
 
 	public:
 		DiamondTrap(std::string name);
@@ -35,7 +35,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap & operator=( DiamondTrap const & rhs ); 
 
 		void attack(const std::string &target) { ScavTrap::attack(target); }
-		
+
 		void whoAmI();
 };
 

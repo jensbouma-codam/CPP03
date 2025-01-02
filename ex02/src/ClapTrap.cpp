@@ -6,7 +6,7 @@
 /*   By: jbouma <jbouma@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/10/29 12:20:54 by jbouma        #+#    #+#                 */
-/*   Updated: 2024/12/31 20:00:47 by jensbouma     ########   odam.nl         */
+/*   Updated: 2025/01/02 11:32:02 by jensbouma     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,19 @@
 
 ClapTrap::ClapTrap()
 {
+	_name = "Claptrap";
+	_hitpoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "Claptrap default Constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(std::string name) : _name(name)
 {
+	_name = name;
+	_hitpoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "Claptrap " << _name << " Constructed" << std::endl;
 }
 

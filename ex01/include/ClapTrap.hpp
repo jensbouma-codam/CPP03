@@ -6,7 +6,7 @@
 /*   By: jbouma <jbouma@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/10/29 12:20:50 by jbouma        #+#    #+#                 */
-/*   Updated: 2024/12/31 19:54:06 by jensbouma     ########   odam.nl         */
+/*   Updated: 2025/01/02 11:34:14 by jensbouma     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class ClapTrap
 {
 	protected:
-		std::string	_name = "Default ClapTrap";
+		std::string	_name;
 		int			_hitpoints;
 		int			_energyPoints;
 		int			_attackDamage;
